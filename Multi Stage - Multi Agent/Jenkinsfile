@@ -17,5 +17,13 @@ pipeline {
         sh 'node --version'
       }
     }
+        stage('DB') {
+      agent {
+        docker { image 'mssql:2022-latest' }
+      }
+      steps {
+        sh 'node --version'
+      }
+    }
   }
 }
