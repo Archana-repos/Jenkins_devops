@@ -22,7 +22,7 @@ pipeline {
         docker { image 'mssql:2022-latest' }
       }
       steps {
-        sh 'node --version'
+        sh 'SHOW DATABASES'
       }
     }
   }
